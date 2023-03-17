@@ -7,8 +7,24 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    @Test
+    void testCheckPalindrome() {
+        Palindrome palindrome = new Palindrome();
+
+        // racecar
+        assertTrue(palindrome.checkPalindromeStack("racecar"));
+        assertTrue(palindrome.checkPalindromeQueue("racecar"));
+
+        // kayak
+        assertFalse(palindrome.checkPalindromeStack("sedan"));
+        assertFalse(palindrome.checkPalindromeQueue("sedan"));
+
+        // bed
+        assertFalse(palindrome.checkPalindromeStack("bed"));
+        assertFalse(palindrome.checkPalindromeQueue("bed"));
+        
+        // Borrow or rob
+        assertTrue(palindrome.checkPalindromeStack("Borrow or rob"));
+        assertTrue(palindrome.checkPalindromeQueue("Borrow or rob"));
     }
 }
