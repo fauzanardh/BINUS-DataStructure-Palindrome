@@ -15,16 +15,16 @@ class AppTest {
         assertTrue(palindrome.checkPalindromeStack("racecar"));
         assertTrue(palindrome.checkPalindromeQueue("racecar"));
 
+        // Borrow or rob
+        assertTrue(palindrome.checkPalindromeStack("Borrow or rob"));
+        assertTrue(palindrome.checkPalindromeQueue("Borrow or rob"));
+
         // kayak
         assertFalse(palindrome.checkPalindromeStack("sedan"));
         assertFalse(palindrome.checkPalindromeQueue("sedan"));
 
-        // bed
-        assertFalse(palindrome.checkPalindromeStack("bed"));
-        assertFalse(palindrome.checkPalindromeQueue("bed"));
-        
-        // Borrow or rob
-        assertTrue(palindrome.checkPalindromeStack("Borrow or rob"));
-        assertTrue(palindrome.checkPalindromeQueue("Borrow or rob"));
+        // This is not a palindrome
+        assertFalse(palindrome.checkPalindromeStack("This is not a palindrome"));
+        assertFalse(palindrome.checkPalindromeQueue("This is not a palindrome"));
     }
 }
