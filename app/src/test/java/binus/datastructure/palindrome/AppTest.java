@@ -19,7 +19,7 @@ class AppTest {
         assertTrue(palindrome.checkPalindromeStack("Borrow or rob"));
         assertTrue(palindrome.checkPalindromeQueue("Borrow or rob"));
 
-        // kayak
+        // sedan
         assertFalse(palindrome.checkPalindromeStack("sedan"));
         assertFalse(palindrome.checkPalindromeQueue("sedan"));
 
