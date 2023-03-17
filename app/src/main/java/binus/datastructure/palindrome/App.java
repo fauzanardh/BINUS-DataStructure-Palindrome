@@ -9,11 +9,9 @@ public class App {
         String input = System.console().readLine("Enter a string: ");
 
         // Check if the input is a palindrome
-        Palindrome palindrome = new Palindrome();
-
         // First check using the stack ver.
         System.out.println("Using stack ver.:");
-        if (palindrome.checkPalindromeStack(input)) {
+        if (Palindrome.checkPalindromeStack(input)) {
             System.out.println(String.format("The string \"%s\" is a palindrome.", input));
         } else {
             System.out.println(String.format("The string \"%s\" is not a palindrome.", input));
@@ -21,7 +19,7 @@ public class App {
 
         // Then check using the queue ver.
         System.out.println("Using queue ver.:");
-        if (palindrome.checkPalindromeQueue(input)) {
+        if (Palindrome.checkPalindromeQueue(input)) {
             System.out.println(String.format("The string \"%s\" is a palindrome.", input));
         } else {
             System.out.println(String.format("The string \"%s\" is not a palindrome.", input));

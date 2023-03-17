@@ -5,23 +5,22 @@ import java.util.Queue;
 import java.util.LinkedList;
 
 public class Palindrome {
-    private Stack<Character> stack = new Stack<Character>();
-    private Queue<Character> queue = new LinkedList<Character>();
+    public static Boolean checkPalindromeStack(String input) {
+        Stack<Character> stack = new Stack<Character>();
 
-    public Boolean checkPalindromeStack(String input) {
         // Strip the input string from spaces and make it lowercase
         input = input.replaceAll("\\s", "");
         input = input.toLowerCase();
 
         // Input character by character to stack
         for (int i = 0; i < input.length(); i++) {
-            this.stack.push(input.charAt(i));
+            stack.push(input.charAt(i));
         }
 
         // Reverse the input string
         String reverse = "";
-        while (!this.stack.isEmpty()) {
-            reverse += this.stack.pop();
+        while (!stack.isEmpty()) {
+            reverse += stack.pop();
         }
 
         // Compare the input string with the reversed string
@@ -32,21 +31,23 @@ public class Palindrome {
         }
     }
 
-    public Boolean checkPalindromeQueue(String input) {
+    public static Boolean checkPalindromeQueue(String input) {
+        Queue<Character> queue = new LinkedList<Character>();
+
         // Strip the input string from spaces and make it lowercase
         input = input.replaceAll("\\s", "");
         input = input.toLowerCase();
 
         // Input character by character to queue
         for (int i = 0; i < input.length(); i++) {
-            this.queue.add(input.charAt(i));
+            queue.add(input.charAt(i));
         }
 
         // Reverse the input string, the hacky way
         Character[] reverseArray = new Character[input.length()];
         int i = input.length() - 1;
-        while (!this.queue.isEmpty()) {
-            reverseArray[i] = this.queue.remove();
+        while (!queue.isEmpty()) {
+            reverseArray[i] = queue.remove();
             i--;
         }
         String reverse = "";

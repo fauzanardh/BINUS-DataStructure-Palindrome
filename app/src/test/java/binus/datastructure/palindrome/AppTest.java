@@ -9,22 +9,20 @@ import static org.junit.jupiter.api.Assertions.*;
 class AppTest {
     @Test
     void testCheckPalindrome() {
-        Palindrome palindrome = new Palindrome();
-
         // racecar
-        assertTrue(palindrome.checkPalindromeStack("racecar"));
-        assertTrue(palindrome.checkPalindromeQueue("racecar"));
+        assertTrue(Palindrome.checkPalindromeStack("racecar"));
+        assertTrue(Palindrome.checkPalindromeQueue("racecar"));
 
         // Borrow or rob
-        assertTrue(palindrome.checkPalindromeStack("Borrow or rob"));
-        assertTrue(palindrome.checkPalindromeQueue("Borrow or rob"));
+        assertTrue(Palindrome.checkPalindromeStack("Borrow or rob"));
+        assertTrue(Palindrome.checkPalindromeQueue("Borrow or rob"));
 
         // sedan
-        assertFalse(palindrome.checkPalindromeStack("sedan"));
-        assertFalse(palindrome.checkPalindromeQueue("sedan"));
+        assertFalse(Palindrome.checkPalindromeStack("sedan"));
+        assertFalse(Palindrome.checkPalindromeQueue("sedan"));
 
         // This is not a palindrome
-        assertFalse(palindrome.checkPalindromeStack("This is not a palindrome"));
-        assertFalse(palindrome.checkPalindromeQueue("This is not a palindrome"));
+        assertFalse(Palindrome.checkPalindromeStack("This is not a palindrome"));
+        assertFalse(Palindrome.checkPalindromeQueue("This is not a palindrome"));
     }
 }
