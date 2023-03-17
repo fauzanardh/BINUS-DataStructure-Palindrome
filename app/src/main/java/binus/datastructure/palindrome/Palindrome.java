@@ -54,9 +54,6 @@ public class Palindrome {
             reverse += c;
         }
 
-        System.out.println(input);
-        System.out.println(reverse);
-
         // Compare the input string with the reversed string
         if (input.equals(reverse)) {
             return true;
